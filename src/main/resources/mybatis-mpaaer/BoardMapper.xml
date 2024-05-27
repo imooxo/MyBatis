@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="lecture.spring_boot_mybatis.mapper.UserMapper">
+    <select id="getBoardsALL" resultType="lecture.spring_boot_mybatis.domain.User">
+        SELECT user.* FROM board
+    </select>
+
+    <insert id = "insertBoard" parameterType="map">
+        INSERT INTO board(title, content, writer) VALUES(#{title}, #{content}, #{writer})
+
+    </insert>
+</mapper>
