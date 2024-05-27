@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
 <mapper namespace="lecture.spring_boot_mybatis.mapper.UserMapper">
     <select id="retrieveAll" resultType="lecture.spring_boot_mybatis.domain.User">
-        SELECT user.* From user
+        SELECT user.* FROM user
     </select>
+    <!--  어떤 값을 불러와서 사용할 것인지   -->
+    <!--    <insert id="insertUser" parameterType="map">-->
+    <!--        INSERT INTO user(name, nickname) values(#{name}, #{nickname})-->
+    <!--    </insert>-->
+    <update id="updateUser" parameterType="map">
+        UPDATE user SET name=#{name}, nickname=#{nickname} WHERE id=#{id}
+    </update>
+    <delete id="deleteUser" parameterType="map">
+        DELETE FROM user WHERE id=#{id}
+    </delete>
 </mapper>
