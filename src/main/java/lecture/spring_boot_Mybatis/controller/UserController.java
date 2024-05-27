@@ -3,6 +3,7 @@ package lecture.spring_boot_Mybatis.controller;
 
 import lecture.spring_boot_Mybatis.dto.UserCreateDTO;
 import lecture.spring_boot_Mybatis.dto.UserDTO;
+import lecture.spring_boot_Mybatis.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
